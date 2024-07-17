@@ -8,6 +8,17 @@ A collaborative learning project where users self-organize to improve their ML m
 ## Main
 The application currently uses MPI and GRPC (experimental) to enable communication between different nodes in the network. The goal of the framework to organize everything in a modular manner. That way a researcher or engineer can easily swap out different components of the framework to test their hypothesis or a new algorithm.
 
+## Installing Dependencies
+Project dependencies are listed in requirements.txt and can be installed using:
+
+``pip install -r requirements.txt``
+
+Note: You may encounter an error about "mpi.h" file not found, which is required for mpi4py module to be installed. In that case:
+
+``sudo apt install libopenmpi-dev`` or ``conda install openmpi``
+
+Then re-run the pip command.
+
 ### Framework Rewrite Objective
 - [ ] O1: Benchmark existing configurations and algorithms.
 - [x] O2: Separate the communication layer (topology) from collaborative learning algorithms.
